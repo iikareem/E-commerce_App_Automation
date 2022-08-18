@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="18" time="183.746">
+<testcase classname="Registartion" name="guest user could register with valid data successfully" time="11.533">
+<system-out><![CDATA[Given User at home page and click to register tab...........................passed
+And User enter his valid data to complete register..........................passed
+And User enter his valid data to Company section............................passed
+And User enter his valid Password...........................................passed
+And User clicks on register button..........................................passed
+Then The Registartion done successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="User could log in with valid email and password" time="10.369">
+<system-out><![CDATA[Given User at home page and click login Tab.................................passed
+When User enter his valid data..............................................passed
+And User click log in button................................................passed
+Then Back to home page done.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Reset Pasword" name="User could reset his/her password successfully" time="7.163">
+<system-out><![CDATA[Given User at  home page and click to log in................................passed
+And User clicks on forget password..........................................passed
+When User enter his email address...........................................passed
+And user click Recover Password Button......................................passed
+Then The Success message is displayed.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="search" name="Logged User could search for any product" time="9.041">
+<system-out><![CDATA[Given Log in successful.....................................................passed
+And User enter any product in search field..................................passed
+When User click on search button............................................passed
+Then Search has done successful.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search home page products using Euro currency" name="User could switch Tht currency to Euro €" time="10.501">
+<system-out><![CDATA[Given user log and Navigate to Home.........................................passed
+When User select euro currency..............................................passed
+Then user can find euro currency € displayed in Home Page...................passed
+]]></system-out>
+</testcase>
+<testcase classname="users could open followUs links" name="user opens facebook link" time="6.091">
+<system-out><![CDATA[Given user opens facebook link..............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="users could open followUs links" name="user opens twitter link" time="6.338">
+<system-out><![CDATA[Given user opens twitter link...............................................passed
+Then "https://twitter.com/nopCommerce" is opened............................passed
+]]></system-out>
+</testcase>
+<testcase classname="users could open followUs links" name="user opens rss link" time="5.322">
+<failure message="expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]" type="java.lang.AssertionError"><![CDATA[Given user opens rss link...................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" is opened......failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at Step_definition.A6_FollowUs.isOpenedInNewTab(A6_FollowUs.java:37)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened(file:///C:/Users/1/IdeaProjects/E-commerce_App_Automation/src/main/resources/features/F06_FollowUs.feature:14)
+]]></failure>
+</testcase>
+<testcase classname="users could open followUs links" name="user opens youtube link" time="10.732">
+<system-out><![CDATA[Given user opens youtube link...............................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened...................passed
+]]></system-out>
+</testcase>
+<testcase classname="user should be navigate to the url from home slider" name="user should go to Nokia Lumia 1020 page by clicking it from the Nokia slider" time="9.281">
+<failure message="The following asserts failed:&#10;&#9;The expected url : https://demo.nopcommerce.com/nokia-lumia-1020and the actual url is : https://demo.nopcommerce.com/ expected [https://demo.nopcommerce.com/] but found [https://demo.nopcommerce.com/nokia-lumia-1020]" type="java.lang.AssertionError"><![CDATA[Given User clicks on Nokia Lumia 1020 slider................................passed
+Then User should be Navigated to Nokia Lumia 1020 page......................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	The expected url : https://demo.nopcommerce.com/nokia-lumia-1020and the actual url is : https://demo.nopcommerce.com/ expected [https://demo.nopcommerce.com/] but found [https://demo.nopcommerce.com/nokia-lumia-1020]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at Step_definition.A7_SliderAction.NokiaLumiaPage(A7_SliderAction.java:29)
+	at ✽.User should be Navigated to Nokia Lumia 1020 page(file:///C:/Users/1/IdeaProjects/E-commerce_App_Automation/src/main/resources/features/F07_Silder.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="user should be navigate to the url from home slider" name="user should go tp  iphone 6 page by clicking it from the iphone 6 slider" time="11.294">
+<failure message="The following asserts failed:&#10;&#9;The expected url : https://demo.nopcommerce.com/iphone-6and the actual url is : https://demo.nopcommerce.com/ expected [https://demo.nopcommerce.com/] but found [https://demo.nopcommerce.com/iphone-6]" type="java.lang.AssertionError"><![CDATA[Given User clicks on iphone 6 slider........................................passed
+Then User should be Navigated to iphone 6 page..............................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	The expected url : https://demo.nopcommerce.com/iphone-6and the actual url is : https://demo.nopcommerce.com/ expected [https://demo.nopcommerce.com/] but found [https://demo.nopcommerce.com/iphone-6]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at Step_definition.A7_SliderAction.ToIphone6_Page(A7_SliderAction.java:48)
+	at ✽.User should be Navigated to iphone 6 page(file:///C:/Users/1/IdeaProjects/E-commerce_App_Automation/src/main/resources/features/F07_Silder.feature:10)
+]]></failure>
+</testcase>
+<testcase classname="Wishlist" name="Logged user could add different products to Wishlist" time="11.676">
+<system-out><![CDATA[Given User login with his data..............................................passed
+When User clicks on Add tap to Wishlist.....................................passed
+Then success message is displayed...........................................passed
+And Add Done successful.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="compare list" name="Logged user could add different products to compare list" time="10.768">
+<system-out><![CDATA[Given User log-in with his valid information................................passed
+When User click on Add to compare-list......................................passed
+Then Add to compare list done successful....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add to Shopping cart" name="Logged user could add different products to Shopping cart" time="13.173">
+<system-out><![CDATA[Given User has login with his valid email and password......................passed
+When User clicks on Add to Shopping cart....................................passed
+Then Add ToShopping cart done successful....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="different Categories" name="Logged user could select different Categories" time="9.929">
+<system-out><![CDATA[Given User has login with his valid email and pass..........................passed
+When Select the Category....................................................passed
+Then Open the sub-Category..................................................passed
+And Open page done successful...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="filter" name="Logged user could filter with color" time="9.041">
+<system-out><![CDATA[Given user log in with valid email and password.............................passed
+When select specific category like Apparel > Shoes..........................passed
+Then select color...........................................................passed
+And select color done successfully..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="select tags" name="Logged user could select different tags" time="10.29">
+<system-out><![CDATA[Given user log and navigate to home page....................................passed
+And navigate to All product tags............................................passed
+When user select any tag like apparel.......................................passed
+Then Products tagged with 'apparel' appears.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create Order" name="Create successful Order" time="20.159">
+<system-out><![CDATA[Given User log in with valid email..........................................passed
+And User click on Add items to Shopping cart................................passed
+And Navigate to shopping cart...............................................passed
+And Agree with the terms of service.........................................passed
+When User click checkout button.............................................passed
+And User enter valid data to Billing address section........................passed
+And User enter valid data to Shipping method section........................passed
+And User enter valid data to Payment method section.........................passed
+And Payment Information Section.............................................passed
+Then User Confirm Order.....................................................passed
+And The order done successful...............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
