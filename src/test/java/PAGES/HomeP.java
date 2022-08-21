@@ -97,13 +97,21 @@ public class HomeP {
     public static void SelectCurrency() throws InterruptedException {
         WebElement euro = hook.driver.findElement(By.name("customerCurrency"));
         Select SelectC = new Select(euro);
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         SelectC.selectByValue("https://demo.nopcommerce.com/changecurrency/6?returnUrl=%2F"); }
 
-    public static void currencyS(){
-        String ExpCurrency = "Euro";
-        String ActCurrency = hook.driver.findElement(By.cssSelector("option[selected]")).getText();
-        Assert.assertTrue(ActCurrency.contains(ExpCurrency));
+
+    @FindBy(css = "span.price")
+    public static List<WebElement> ProductPC;
+
+    public static void ProductsInEuro() {
+
+
+        String EuroS = "€";
+        List<WebElement> productsPrices = ProductPC;
+        for (WebElement price : productsPrices) {
+            Assert.assertTrue(price.getText().contains(EuroS));
+        }
     }
 
 

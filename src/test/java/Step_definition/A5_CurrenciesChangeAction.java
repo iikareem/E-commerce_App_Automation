@@ -6,7 +6,11 @@ import PAGES.HomeP;
 import PAGES.LoginP;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
+
+import java.util.List;
 
 
 public class A5_CurrenciesChangeAction {
@@ -26,8 +30,11 @@ public class A5_CurrenciesChangeAction {
     }
     @When("User select euro currency")
     public void user_select_euro_currency() throws InterruptedException {HomeP.SelectCurrency();}
-    @Then("user can find euro currency € displayed in Home Page")
-    public void user_can_find_euro_symbol(){HomeP.currencyS();}
+
+    @Then("products prices should be in €")
+    public void Check_product_Symbol() {
+        HomeP.ProductsInEuro();
+    }
 
 
 }
